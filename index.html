@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="shortcut icon" href="/favicon/calculator.png" type="image/x-icon">    
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-0 flex justify-center items-center h-screen bg-[hsl(0,0%,95%)]">
+    <!-- calculator -->
+    <div class=" bg-[hsl(0,0%,15%)] rounded-2xl lg:max-w-lg overflow-hidden lg:mx-0 mx-5 ">
+        <input id="display" readonly class="w-full p-6 text-7xl text-right border-0 bg-[hsl(0,0%,20%)] text-white items-center">
+        <div id="keys" class="grid grid-cols-4 gap-2 lg:p-6 p-2">
+            <button onclick="appendToDisplay('+')" class="hover:bg-[hsl(39,100%,65%)] active:bg-slate-600 lg:w-24 w-20 h-20 lg:h-24 rounded-full border-0 bg-[hsl(39,100%,55%)] text-white lg:text-5xl text-4xl font-bold cursor-pointer">+</button>
+
+            <button onclick="appendToDisplay('7')" class="hover:bg-slate-700 active:bg-slate-600  lg:w-24 w-20 h-20 lg:h-24  rounded-full border-0 bg-[hsl(0,0%,30%)] text-white lg:text-5xl text-4xl font-bold cursor-pointer">7</button>
+
+            <button onclick="appendToDisplay('8')" class="hover:bg-slate-700 active:bg-slate-600  lg:w-24 w-20 h-20 lg:h-24 rounded-full border-0 bg-[hsl(0,0%,30%)] text-white text-5xl font-bold cursor-pointer">8</button>
+
+            <button onclick="appendToDisplay('9')" class="hover:bg-slate-700 active:bg-slate-600 lg:w-24 w-20 h-20 lg:h-24 rounded-full border-0 bg-[hsl(0,0%,30%)] text-white text-5xl font-bold cursor-pointer">9</button>
+            <button onclick="appendToDisplay('-')" class="hover:bg-[hsl(39,100%,65%)] active:bg-slate-600  lg:w-24 w-20 h-20 lg:h-24 rounded-full border-0 bg-[hsl(39,100%,55%)] text-white text-5xl font-bold cursor-pointer">-</button>
+            <button onclick="appendToDisplay('4')" class="hover:bg-slate-700 active:bg-slate-600  lg:w-24 w-20 h-20 lg:h-24 rounded-full border-0 bg-[hsl(0,0%,30%)] text-white text-5xl font-bold cursor-pointer">4</button>
+            <button onclick="appendToDisplay('5')" class="hover:bg-slate-700 active:bg-slate-600  lg:w-24 w-20 h-20 lg:h-24 rounded-full border-0 bg-[hsl(0,0%,30%)] text-white text-5xl font-bold cursor-pointer">5</button>
+            <button onclick="appendToDisplay('6')" class="hover:bg-slate-700 active:bg-slate-600  lg:w-24 w-20 h-20 lg:h-24 rounded-full border-0 bg-[hsl(0,0%,30%)] text-white text-5xl font-bold cursor-pointer">6</button>
+            <button onclick="appendToDisplay('*')" class="hover:bg-[hsl(39,100%,65%)] active:bg-slate-600  lg:w-24 w-20 h-20 lg:h-24 rounded-full border-0 bg-[hsl(39,100%,55%)] text-white text-5xl font-bold cursor-pointer">*</button>
+            <button onclick="appendToDisplay('1')" class="hover:bg-slate-700 active:bg-slate-600  lg:w-24 w-20 h-20 lg:h-24 rounded-full border-0 bg-[hsl(0,0%,30%)] text-white text-5xl font-bold cursor-pointer">1</button>
+            <button onclick="appendToDisplay('2')" class="hover:bg-slate-700 active:bg-slate-600  lg:w-24 w-20 h-20 lg:h-24 rounded-full border-0 bg-[hsl(0,0%,30%)] text-white text-5xl font-bold cursor-pointer">2</button>
+            <button onclick="appendToDisplay('3')" class="hover:bg-slate-700 active:bg-slate-600  lg:w-24 w-20 h-20 lg:h-24 rounded-full border-0 bg-[hsl(0,0%,30%)] text-white text-5xl font-bold cursor-pointer">3</button>
+            <button onclick="appendToDisplay('/')" class="hover:bg-[hsl(39,100%,65%)] active:bg-slate-600  lg:w-24 w-20 h-20 lg:h-24 rounded-full border-0 bg-[hsl(39,100%,55%)] text-white text-5xl font-bold cursor-pointer">/</button>
+            <button onclick="appendToDisplay('0')" class="hover:bg-slate-700 active:bg-slate-600  lg:w-24 w-20 h-20 lg:h-24 rounded-full border-0 bg-[hsl(0,0%,30%)] text-white text-5xl font-bold cursor-pointer">0</button>
+            <button onclick="appendToDisplay('.')" class="hover:bg-slate-700 active:bg-slate-600  lg:w-24 w-20 h-20 lg:h-24 rounded-full border-0 bg-[hsl(0,0%,30%)] text-white text-5xl font-bold cursor-pointer">.</button>
+            <button onclick="calculate()" class="hover:bg-slate-700 active:bg-slate-600  lg:w-24 w-20 h-20 lg:h-24 rounded-full border-0 bg-[hsl(0,0%,100%)] text-black text-5xl font-bold cursor-pointer">=</button>
+            <button onclick="clearDisplay()" class="hover:bg-[hsl(39,100%,65%)] active:bg-slate-600  lg:w-24 w-20 h-20 lg:h-24 rounded-full border-0 bg-[hsl(39,100%,55%)] text-white text-5xl font-bold cursor-pointer ">C</button>
+        </div>
+    </div>
+<script src="javascript.js"></script>
+</body>
+</html>
